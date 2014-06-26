@@ -3,7 +3,7 @@ var all_matches = {
   "match2" : [ "team3", 1, "team4", 2 ],
   "match3" : [ "team1", 2, "team3", 2 ],
   "match4" : [ "team4", 2, "team2", 2 ],
-  "match5" : [ "team4", 0, "team1", 0 ],
+  "match5" : [ "team4", 0, "team1", 1 ],
   "match6" : [ "team2", 1, "team3", 0 ],
 };
 
