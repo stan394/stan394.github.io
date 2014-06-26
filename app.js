@@ -14,6 +14,13 @@ var team_names = {
   "team4" : "United States",
 };
 
+var team_imgs = {
+  "team1" : "http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png",
+  "team2" : "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/23px-Flag_of_Portugal.svg.png",
+  "team3" : "http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/23px-Flag_of_Ghana.svg.png",
+  "team4" : "http://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/23px-Flag_of_the_United_States.svg.png",
+}
+
 var map = {};
 var match5 = all_matches['match5'];
 var match6 = all_matches['match6'];
@@ -206,11 +213,21 @@ function print_table(table) {
     });
     var keys = ['rank', 'name', 'pld', 'w', 'l', 'd', 'gf', 'ga', 'gd', 'pts'];
     for (var i = 0; i < keys.length; i++) {
-      $("<td/>", {
+      var attrs = {
         "id" : code+i,
         "class" : "cell",
-        "text" : record[keys[i]],
-      }).appendTo(tr);
+        "text" : record[keys[i]]+' ',
+      };
+      if (record['rank'] < 3) {
+        attrs['class'] = "cell green";
+      }
+      var td = $("<td/>", attrs);
+      td.appendTo(tr);
+      if (keys[i] == 'name') {
+        td.append($("<img/>", {
+          "src" : team_imgs[code],
+        }));
+      }
     }
     tr.appendTo($("#group_table"));
   }
@@ -219,7 +236,7 @@ function print_table(table) {
 function print_result(table, code) {
   $("#first_"+code).text(get_rank(table, 1));
   $("#second_"+code).text(get_rank(table, 2));
-  $("."+code).text(team_names[code]);
+  $("."+code).text(team_names[code]+' ').append($("<img/>", { "src" : team_imgs[code] }));
 }
 
 function main(matches) {
@@ -254,13 +271,13 @@ function main(matches) {
 }
 
 function print_current(table, matches) {
-  $("#match5_0").text(team_names[all_matches["match5"][0]]);
+  $("#match5_0").text(team_names[all_matches["match5"][0]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match5"][0]]}));
   $("#match5_1").text(all_matches["match5"][1]);
-  $("#match5_2").text(team_names[all_matches["match5"][2]]);
+  $("#match5_2").text(team_names[all_matches["match5"][2]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match5"][2]]}));
   $("#match5_3").text(all_matches["match5"][3]);
-  $("#match6_0").text(team_names[all_matches["match6"][0]]);
+  $("#match6_0").text(team_names[all_matches["match6"][0]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match6"][0]]}));
   $("#match6_1").text(all_matches["match6"][1]);
-  $("#match6_2").text(team_names[all_matches["match6"][2]]);
+  $("#match6_2").text(team_names[all_matches["match6"][2]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match6"][2]]}));
   $("#match6_3").text(all_matches["match6"][3]);
   $("#first").text(get_rank(table, 1));
   $("#second").text(get_rank(table, 2));
