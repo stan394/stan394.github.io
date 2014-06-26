@@ -279,8 +279,6 @@ function print_current(table, matches) {
   $("#match6_1").text(all_matches["match6"][1]);
   $("#match6_2").text(team_names[all_matches["match6"][2]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match6"][2]]}));
   $("#match6_3").text(all_matches["match6"][3]);
-  $("#first").text(get_rank(table, 1));
-  $("#second").text(get_rank(table, 2));
 }
 
 function recalculate() {

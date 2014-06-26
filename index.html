@@ -6,7 +6,8 @@
     <style type="text/css">
      .cell { padding: 5px; width: 30px; text-align: center; }
      .cell.name { width: 140px; }
-     .box { padding: 10px 0px 20px 30px; }
+     .box { margin-bottom: 20px; text-align: center; }
+     .next { margin-bottom: 40px; text-align: center; }
      #group_table { border-right: 1px solid; border-bottom: 1px solid; }
      #group_table td { border-left: 1px solid; border-top: 1px solid; }
      .green { background-color: #ccffcc; }
@@ -15,10 +16,10 @@
   <body>
     <script src="app.js"></script>
     <div class="row">
-      <div class="col-md-6 box">
-        <div>
-          <p>Current table:</p>
-          <table id="group_table">
+      <div class="col-md-12 box">
+        <div class="box">
+          <p>Group G</p>
+          <table id="group_table" align="center">
             <thead>
               <tr>
                 <td class="cell">Rank</td>
@@ -35,21 +36,16 @@
             </thead>
           </table>
         </div>
-      </div>
-      <div class="col-md-6 box">
-        <div>
-          <p>Current result:</p>
+        <div class="box">
           <p><span id="match5_0"></span> <span id="match5_1"></span> - <span id="match5_3"></span> <span id="match5_2"></span></p>
           <p><span id="match6_0"></span> <span id="match6_1"></span> - <span id="match6_3"></span> <span id="match6_2"></span></p>
-          <p><b>First place:</b> <span id="first"></span></p>
-          <p><b>Second place:</b> <span id="second"></span></p>
           <button id="reload">Reset</button>
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-6 box">
+      <div class="col-md-6 next">
         <div>
           <p>If <span class="team1"></span> scores next...</p>
           <p><b>First place:</b> <span id="first_team1"></span></p>
@@ -57,7 +53,7 @@
           <button id="btn_team1" rel="team1"><span class="team1"></span> scores!</button>
         </div>
       </div>
-      <div class="col-md-6 box">
+      <div class="col-md-6 next">
         <div>
           <p>If <span class="team2"></span> scores next...</p>
           <p><b>First place:</b> <span id="first_team2"></span></p>
@@ -68,7 +64,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6 box">
+      <div class="col-md-6 next">
         <div>
           <p>If <span class="team3"></span> scores next...</p>
           <p><b>First place:</b> <span id="first_team3"></span></p>
@@ -76,7 +72,7 @@
           <button id="btn_team3" rel="team3"><span class="team3"></span> scores!</button>
         </div>
       </div>
-      <div class="col-md-6 box">
+      <div class="col-md-6 next">
         <div>
           <p>If <span class="team4"></span> scores next...</p>
           <p><b>First place:</b> <span id="first_team4"></span></p>
