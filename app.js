@@ -1,24 +1,24 @@
 var all_matches = {
-  "match1" : [ "team1", 4, "team2", 0 ],
-  "match2" : [ "team3", 1, "team4", 2 ],
-  "match3" : [ "team1", 2, "team3", 2 ],
-  "match4" : [ "team4", 2, "team2", 2 ],
-  "match5" : [ "team4", 0, "team1", 1 ],
-  "match6" : [ "team2", 2, "team3", 1 ],
+  "match1" : [ "team1", 2, "team2", 1 ],
+  "match2" : [ "team3", 1, "team4", 1 ],
+  "match3" : [ "team1", 1, "team3", 0 ],
+  "match4" : [ "team4", 2, "team2", 4 ],
+  "match5" : [ "team4", 0, "team1", 0 ],
+  "match6" : [ "team2", 0, "team3", 0 ],
 };
 
 var team_names = {
-  "team1" : "Germany",
-  "team2" : "Portugal",
-  "team3" : "Ghana",
-  "team4" : "United States",
+  "team1" : "Belgium",
+  "team2" : "Algeria",
+  "team3" : "Russia",
+  "team4" : "South Korea",
 };
 
 var team_imgs = {
-  "team1" : "http://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png",
-  "team2" : "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/23px-Flag_of_Portugal.svg.png",
-  "team3" : "http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/23px-Flag_of_Ghana.svg.png",
-  "team4" : "http://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/23px-Flag_of_the_United_States.svg.png",
+  "team1" : "http://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/23px-Flag_of_Belgium_%28civil%29.svg.png",
+  "team2" : "http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/23px-Flag_of_Algeria.svg.png",
+  "team3" : "http://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/23px-Flag_of_Russia.svg.png",
+  "team4" : "http://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/23px-Flag_of_South_Korea.svg.png",
 }
 
 var map = {};
