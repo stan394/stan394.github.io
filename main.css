@@ -1,5 +1,5 @@
 .cell { padding: 5px; width: 30px; text-align: center; }
-.cell.name { width: 140px; }
+.cell.name { width: 140px; text-align: left; }
 .box { margin-bottom: 20px; text-align: center; }
 .box.top { padding-top: 10px; }
 .box.left { padding-left: 10px; }

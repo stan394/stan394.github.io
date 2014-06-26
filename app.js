@@ -216,15 +216,18 @@ function print_table(table) {
       var attrs = {
         "id" : code+i,
         "class" : "cell",
-        "text" : record[keys[i]]+' ',
+        "text" : ' '+record[keys[i]],
       };
       if (record['rank'] < 3) {
         attrs['class'] = "cell green";
       }
+      if (keys[i] == 'name') {
+        attrs['class'] += " name";
+      }
       var td = $("<td/>", attrs);
       td.appendTo(tr);
       if (keys[i] == 'name') {
-        td.append($("<img/>", {
+        td.prepend($("<img/>", {
           "src" : team_imgs[code],
         }));
       }
@@ -236,7 +239,7 @@ function print_table(table) {
 function print_result(table, code) {
   $("#first_"+code).text(get_rank(table, 1));
   $("#second_"+code).text(get_rank(table, 2));
-  $("."+code).text(team_names[code]+' ').append($("<img/>", { "src" : team_imgs[code] }));
+  $("."+code).text(' '+team_names[code]).prepend($("<img/>", { "src" : team_imgs[code] }));
 }
 
 function main(matches) {
@@ -271,11 +274,11 @@ function main(matches) {
 }
 
 function print_current(table, matches) {
-  $("#match5_0").text(team_names[all_matches["match5"][0]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match5"][0]]}));
+  $("#match5_0").text(' '+team_names[all_matches["match5"][0]]).prepend($("<img/>", { "src" : team_imgs[all_matches["match5"][0]]}));
   $("#match5_1").text(all_matches["match5"][1]);
   $("#match5_2").text(team_names[all_matches["match5"][2]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match5"][2]]}));
   $("#match5_3").text(all_matches["match5"][3]);
-  $("#match6_0").text(team_names[all_matches["match6"][0]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match6"][0]]}));
+  $("#match6_0").text(' '+team_names[all_matches["match6"][0]]).prepend($("<img/>", { "src" : team_imgs[all_matches["match6"][0]]}));
   $("#match6_1").text(all_matches["match6"][1]);
   $("#match6_2").text(team_names[all_matches["match6"][2]]+' ').append($("<img/>", { "src" : team_imgs[all_matches["match6"][2]]}));
   $("#match6_3").text(all_matches["match6"][3]);
