@@ -5,5 +5,7 @@
 .box.left { padding-left: 10px; }
 #group_table { border-right: 1px solid; border-bottom: 1px solid; }
 #group_table td { border-left: 1px solid; border-top: 1px solid; }
+#group_table thead td { background-color: #f2f2f2; }
 .green { background-color: #ccffcc; }
-p.score { font-size: +2em; }
+p.score { font-size: 2em; }
+p.title { font-size: 1.5em; }
