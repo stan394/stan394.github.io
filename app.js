@@ -320,6 +320,7 @@ $(document).ready(function () {
       code = $(this).attr('rel');
       all_matches[map[code][0]][map[code][1]] = all_matches[map[code][0]][map[code][1]] + 1;
       recalculate();
+      $("#reload").removeClass("btn-primary").addClass("btn-danger").text("Simulation - Click to Reset");
     });
   }
   $("#reload").on('click', function (event) {
