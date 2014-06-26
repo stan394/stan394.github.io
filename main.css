@@ -1,0 +1,8 @@
+.cell { padding: 5px; width: 30px; text-align: center; }
+.cell.name { width: 140px; }
+.box { margin-bottom: 20px; text-align: center; }
+.box.top { padding-top: 10px; }
+.box.left { padding-left: 10px; }
+#group_table { border-right: 1px solid; border-bottom: 1px solid; }
+#group_table td { border-left: 1px solid; border-top: 1px solid; }
+.green { background-color: #ccffcc; }
