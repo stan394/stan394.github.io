@@ -4,9 +4,80 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <style type="text/css">
+     .cell { padding: 5px; }
     </style>
   </head>
   <body>
     <script src="app.js"></script>
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <table id="group_table">
+            <thead>
+              <tr>
+                <td class="cell">Rank</td>
+                <td class="cell">Name</td>
+                <td class="cell">Pld</td>
+                <td class="cell">W</td>
+                <td class="cell">D</td>
+                <td class="cell">L</td>
+                <td class="cell">GF</td>
+                <td class="cell">GA</td>
+                <td class="cell">GD</td>
+                <td class="cell">Pts</td>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div>
+          <p>Current result:</p>
+          <p><span id="match5_0"></span> <span id="match5_1"></span> - <span id="match5_3"></span> <span id="match5_2"></span></p>
+          <p><span id="match6_0"></span> <span id="match6_1"></span> - <span id="match6_3"></span> <span id="match6_2"></span></p>
+          <p><b>First place:</b> <span id="first"></span></p>
+          <p><b>Second place:</b> <span id="second"></span></p>
+          <button id="reload">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <p>If <span class="team1"></span> scores next...</p>
+          <p><b>First place:</b> <span id="first_team1"></span></p>
+          <p><b>Second place:</b> <span id="second_team1"></span></p>
+          <button id="btn_team1" rel="team1"><span class="team1"></span> scores!</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div>
+          <p>If <span class="team2"></span> scores next...</p>
+          <p><b>First place:</b> <span id="first_team2"></span></p>
+          <p><b>Second place:</b> <span id="second_team2"></span></p>
+          <button id="btn_team2" rel="team2"><span class="team2"></span> scores!</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <p>If <span class="team3"></span> scores next...</p>
+          <p><b>First place:</b> <span id="first_team3"></span></p>
+          <p><b>Second place:</b> <span id="second_team3"></span></p>
+          <button id="btn_team3" rel="team3"><span class="team3"></span> scores!</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div>
+          <p>If <span class="team4"></span> scores next...</p>
+          <p><b>First place:</b> <span id="first_team4"></span></p>
+          <p><b>Second place:</b> <span id="second_team4"></span></p>
+          <button id="btn_team4" rel="team4"><span class="team4"></span> scores!</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
