@@ -211,7 +211,7 @@ function print_table(table) {
     var tr = $("<tr/>", {
       "id" : "tr_"+code,
     });
-    var keys = ['rank', 'name', 'pld', 'w', 'l', 'd', 'gf', 'ga', 'gd', 'pts'];
+    var keys = ['rank', 'name', 'pld', 'w', 'd', 'l', 'gf', 'ga', 'gd', 'pts'];
     for (var i = 0; i < keys.length; i++) {
       var attrs = {
         "id" : code+i,
